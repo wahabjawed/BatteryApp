@@ -6,52 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Phenix</title>
-    <link href="css\bootstrap.css" rel="stylesheet">
-    <link href="css\custom.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/calculation1.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="page-nav">
-            <div class="btn-back"><a href="index.html">⌫</a></div>
-            Calculator
-        </div>
 
         <form class="form" role="form">
             <h2 class="form-heading">PV Calculator</h2>
             <div class="control-container">
                 <div>
-                    <label for="maxExpectedLoad">Max Expected Load</label>
-                    <input type="number" name="maxExpectedLoad" class="form-control" placeholder="Watts" />
-                    <label for="hours">Hours</label>
-                    <input type="number" name="hours" class="form-control" placeholder="Used/Day" />
-                    <label for="panel">Panel</label>
-                    <input type="number" name="panel" class="form-control" placeholder="Watts" />
-                    <label for="hoursOfSunPerDay">Hours of Sun/Day</label>
-                    <input type="number" name="hoursOfSunPerDay" class="form-control" placeholder="Hours" />
+                    <label for="maxExpectedLoad">Max Expected Load</label> <input type="number" name="maxExpectedLoad" id="maxExpectedLoad" class="form-control" placeholder="Watts" />
+                    <label for="hours">Hours</label> <input type="number" name="hours" id="hours" class="form-control" placeholder="Used/Day" />
+                    <label for="panel">Panel</label> <input type="number" name="panel" id="panel" class="form-control" placeholder="Watts" />
+                    <label for="hoursOfSunPerDay">Hours of Sun/Day</label> <input type="number" name="hoursOfSunPerDay" id="hoursOfSunPerDay" class="form-control" placeholder="Hours" />
                 </div>
                 <div class="separator"></div>
                 <div>
-                    <label for="loadDailyWattHours">Load Daily Watt Hours</label>
-                    <input type="number" name="loadDailyWattHours" class="form-control" placeholder="" />
-                    <label for="loadMonthlyWattHours">Load Monthly Watt Hours</label>
-                    <input type="number" name="loadMonthlyWattHours" class="form-control" placeholder="" />
-                    <label for="solarDailyWattHours">Solar Daily Watt Hours</label>
-                    <input type="number" name="solarDailyWattHours" class="form-control" placeholder="" />
-                    <label for="solarMonthlyWattHours">Solar Monthly Watt Hours</label>
-                    <input type="number" name="solarMonthlyWattHours" class="form-control" placeholder="" />
+                    <label for="loadDailyWattHours">Load Daily Watt Hours</label> <input type="number" name="loadDailyWattHours" id="loadDailyWattHours" class="form-control" placeholder="" readonly />
+                    <label for="loadMonthlyWattHours">Load Monthly Watt Hours</label> <input type="number" name="loadMonthlyWattHours" id="loadMonthlyWattHours" class="form-control" placeholder="" readonly />
+                    <label for="solarDailyWattHours">Solar Daily Watt Hours</label> <input type="number" name="solarDailyWattHours" id="solarDailyWattHours" class="form-control" placeholder="" readonly />
+                    <label for="solarMonthlyWattHours">Solar Monthly Watt Hours</label> <input type="number" name="solarMonthlyWattHours" id="solarMonthlyWattHours" class="form-control" placeholder="" readonly />
                 </div>
-                <div class="separator"></div>
+                <div class="separator" id="information"></div>
                 <div>
                     <label for="battery">Battery</label>
-                    <select name="battery" class="form-control">
+                    <select name="battery" id="battery" class="form-control">
                         <option value="12">12 Volt</option>
                         <option value="24">24 Volt</option>
                         <option value="36">36 Volt</option>
                         <option value="48">48 Volt</option>
                     </select>
-                    <label for="requiredBatterySize">Required Battery Size</label>
-                    <input type="number" name="requiredBatterySize" class="form-control" placeholder="" />
+                    <label for="requiredBatterySize">Required Battery Size</label> <input type="number" name="requiredBatterySize" id="requiredBatterySize" class="form-control" placeholder="" readonly />
                 </div>
             </div>
         </form>
@@ -62,6 +51,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

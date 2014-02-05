@@ -88,5 +88,8 @@ div.separator {
     border-bottom:dotted 1px;
     border-top:dotted 1px;
     padding:0px;
+}
 
+div.separator .alert {
+    margin:5px 0px;
 }
