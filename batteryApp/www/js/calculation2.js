@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.form-control').change(function () {
+    $('.form-control').keyup(function () {
         var voc = $('#voc').val();
         var isc = $('#isc').val();
         var rating = $('#rating').val();
@@ -23,8 +23,10 @@ $(document).ready(function () {
         $('#maxCurrent').val(maxCurrent.toFixed(1));
         $('#minimumVoltage').val(minimumVoltage.toFixed(1));
         $('#minimumCurrent').val(minimumCurrent.toFixed(1));
-        $('#pvLosses').val(isNaN(pvLosses)?"Above inputs are required":pvLosses.toFixed(1));
+        $('#pvLosses').val(isNaN(pvLosses) ? "Above inputs are required" : pvLosses.toFixed(1));
+        (pvLosses < 22.6) ? $('#pvLosses').css('background-color', '#f2dede') : $('#pvLosses').css('background-color', '#eee');
         $('#pvPercentLosses').val(isNaN(pvPercentLosses) ? "Above inputs are required" : pvPercentLosses.toFixed(1));
+        (pvPercentLosses < 1) ? $('#pvPercentLosses').css('background-color', '#f2dede') : $('#pvPercentLosses').css('background-color', '#eee');
         $('#voltageRating').val(maxVoltage.toFixed(1))
         $('#fuseCurrent').val(fuseCurrent.toFixed(1))
     });
