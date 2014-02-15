@@ -113,3 +113,7 @@ div.separator .alert {
 label[for="pvLosses"], label[for="pvPercentLosses"] {
     margin-top:10px;
 }
+.back {
+    width:30px;
+    height:18px;
+}

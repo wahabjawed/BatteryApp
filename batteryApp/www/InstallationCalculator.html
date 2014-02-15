@@ -17,6 +17,10 @@
     <div class="container">
         <div class="bg" id="aboutBg"></div>
         <form class="form" role="form">
+            <div class="page-nav">
+                <div class="btn-back"><a href="index.html"><img class="back" src="images/back.png" /></a></div>
+                Installation Calculator
+            </div>
             <h2 class="form-heading">PV Calculator</h2>
             <div class="control-container">
                 <div>
@@ -25,18 +29,25 @@
                             <h3 class="panel-title">Solar Panel Parameters</h3>
                         </div>
                         <div class="panel-body">
-                            <label for="voc">Voc - (Volts)</label> <input type="number" name="voc" id="voc" class="form-control" placeholder="Watts" />
-                            <label for="isc">Isc - (Amps)</label> <input type="number" name="isc" id="isc" class="form-control" placeholder="Amps" />
-                            <label for="rating">Rating - (Watts)</label> <input type="number" name="rating" id="rating" class="form-control" placeholder="Watts" />
-                            <label for="quantity">Quantity - (Total Panel to be used)</label> <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Total Panel to be used" />
+                            <label for="voc">Open Circuit Voltage</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="voc" id="voc" class="form-control" placeholder="Open Circuit Voltage" />
+                            <label for="isc">Short Circuit Current</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="isc" id="isc" class="form-control" placeholder="Short Circuit Current" />
+                            <label for="rating">Max Panel Power</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="rating" id="rating" class="form-control" placeholder="Max Panel Power" />
+                            <label for="quantity">Total Panel to be used</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="quantity" id="quantity" class="form-control" placeholder="Total Panel to be used" />
                             <label for="connection">Connection Type</label>
                             <select name="connection" id="connection" class="form-control">
                                 <option value="1">Parallel</option>
                                 <option value="2">Series</option>
                             </select>
-                            <label for="power">Power (Watts)</label> <input type="text" name="power" id="power" class="form-control" placeholder="Watts" readonly />
-                            <label for="maximumVoltage">Maximum Voltage (Volts)</label> <input type="text" name="maxVoltage" id="maxVoltage" class="form-control" placeholder="Volts" readonly />
-                            <label for="maximumCurrent">Maximum Current (Amps)</label> <input type="text" name="maxCurrent" id="maxCurrent" class="form-control" placeholder="Amps" readonly />
+                            <label for="power">Power (Watts)</label>
+                            <input type="text" name="power" id="power" class="form-control" placeholder="Watts" readonly />
+                            <label for="maximumVoltage">Maximum Voltage (Volts)</label>
+                            <input type="text" name="maxVoltage" id="maxVoltage" class="form-control" placeholder="Volts" readonly />
+                            <label for="maximumCurrent">Maximum Current (Amps)</label>
+                            <input type="text" name="maxCurrent" id="maxCurrent" class="form-control" placeholder="Amps" readonly />
                         </div>
                     </div>
                 </div>
@@ -47,8 +58,10 @@
                             <h3 class="panel-title">Charge Controller</h3>
                         </div>
                         <div class="panel-body">
-                            <label for="minimumVoltage">Minimum Voltage (Volts)</label> <input type="text" name="minimumVoltage" id="minimumVoltage" class="form-control" placeholder="Volts" readonly />
-                            <label for="minimumCurrent">Minimum Current (Amps)</label> <input type="text" name="minimumCurrent" id="minimumCurrent" class="form-control" placeholder="Amps" readonly />
+                            <label for="minimumVoltage">Minimum Voltage (Volts)</label>
+                            <input type="text" name="minimumVoltage" id="minimumVoltage" class="form-control" placeholder="Volts" readonly />
+                            <label for="minimumCurrent">Minimum Current (Amps)</label>
+                            <input type="text" name="minimumCurrent" id="minimumCurrent" class="form-control" placeholder="Amps" readonly />
                         </div>
                     </div>
                 </div>
@@ -59,8 +72,10 @@
                             <h3 class="panel-title">Cable Cross Section</h3>
                         </div>
                         <div class="panel-body">
-                            <label for="cableLength">Cable Length (m)</label> <input type="number" name="cableLength" id="cableLength" class="form-control" placeholder="Meter" />
-                            <label for="crossSection">Cross Section (mm2)</label> <input type="number" name="crossSection" id="crossSection" class="form-control" placeholder="Meter Square" />
+                            <label for="cableLength">From Solar Panel to Inverter</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="cableLength" id="cableLength" class="form-control" placeholder="From Solar Panel to Inverter" />
+                            <label for="crossSection">Cross Section (mm2)</label>
+                            <input type="text" onfocus="(this.type='number')"  onblur="(this.type='text')"  name="crossSection" id="crossSection" class="form-control" placeholder="Meter Square" />
                             <label for="cableType">Cable Type</label>
                             <select name="cableType" id="cableType" class="form-control">
                                 <option value="1">Copper</option>
@@ -68,11 +83,11 @@
                             </select>
                             <label for="pvLosses">Pv Losses (Watts)</label>
                             <input type="text" name="pvLosses" id="pvLosses" class="form-control" placeholder="Watts" readonly />
-                            <div style="background-color:#5FC0DD;margin-left:25px;margin-right:25px;font-size:11px; color:#F8F8F8">Acceptable results must be below 22.6 watt</div>
+                            <div style="background-color: #5FC0DD; margin-left: 25px; margin-right: 25px; font-size: 11px; color: #F8F8F8">Acceptable results must be below 22.6 watt</div>
 
                             <label for="pvPercentLosses">Pv Losses (Percent)</label>
                             <input type="text" name="pvPercentLosses" id="pvPercentLosses" class="form-control" placeholder="Percentage" readonly />
-                          <div style="background-color:#5FC0DD;margin-left:25px;margin-right:25px;font-size:11px; color:#F8F8F8">Acceptable results must be below 1%</div>
+                            <div style="background-color: #5FC0DD; margin-left: 25px; margin-right: 25px; font-size: 11px; color: #F8F8F8">Acceptable results must be below 1%</div>
 
                         </div>
                     </div>
@@ -87,7 +102,8 @@
                             <label for="voltageRating">
                                 Voltage Rating (Volts)
                                   <br />
-                                (Must Be Greater Than Or Equal To)</label> <input type="text" name="voltageRating" id="voltageRating" class="form-control" placeholder="Volts" readonly />
+                                (Must Be Greater Than Or Equal To)</label>
+                            <input type="text" name="voltageRating" id="voltageRating" class="form-control" placeholder="Volts" readonly />
                         </div>
                     </div>
                 </div>
@@ -101,7 +117,8 @@
                             <label for="fuseCurrent">
                                 Fuse Current (Amps)
                                   <br />
-                                </label> <input type="text" name="fuseCurrent" id="fuseCurrent" class="form-control" placeholder="Amps" readonly />
+                            </label>
+                            <input type="text" name="fuseCurrent" id="fuseCurrent" class="form-control" placeholder="Amps" readonly />
                         </div>
                     </div>
                 </div>
