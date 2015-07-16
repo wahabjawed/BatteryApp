@@ -2,7 +2,6 @@
 <widget id="com.smartphenix.pvcalc" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>PV Calc</name>
     <description>
-        PV Calc
     </description>
     <author email="wahabjawed@gmail.com" href="http://phonegap.com">
        Avialdo
@@ -82,3 +81,4 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 </widget>
+
